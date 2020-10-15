@@ -1,1 +1,0 @@
-echo "from file2: ${BASH_SOURCE[1]}"
