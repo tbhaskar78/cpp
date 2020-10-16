@@ -4,7 +4,7 @@
 
 * Creation Date : 08-10-2020
 
-* Last Modified : Thursday 08 October 2020 01:21:24 PM
+* Last Modified : Friday 16 October 2020 10:19:23 AM
 
 * Created By :  Bhaskar Tallamraju
 
@@ -36,7 +36,7 @@ int& getValue() // can take rvalue now as return is ref to location
 }
 
 //overload readVal, that way we can distinguish between rvalue and lvalue passed
-void readVal(int&& i) // will only read rvalue, does not need const ... interesting
+void readVal(int&& i) // using double &&, will only read rvalue, does not need const ... interesting
 {
     cout << "printing only rvalue " << i << endl;
 }
@@ -64,7 +64,7 @@ int main (int argc, char *argv[])
     getValue() = 10; // works but doesn't make sense
 
 
-    // automatically choose rvalue or lvalue 
+    // automatically choose rvalue or lvalue based on overloaded  
     readVal(10); // will select rvalue version automatically
     readVal(i); // will select the function which can accept both rvalye and lvalue
 
