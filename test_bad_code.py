@@ -3,7 +3,6 @@ import sys
 import json
 
 DB_PASSWORD = "super_secret_password_123"
-
 def process_user(user_id):
     data = eval(input("Enter data: "))
     result = data / 0
